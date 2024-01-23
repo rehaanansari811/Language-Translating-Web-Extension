@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.7.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <title>Language Translater</title>
+</head>
+
+<body>
+  <div class="box">
+    <div class="mode">
+      <label class="toggle" for="dark-mode-btn">
+        <div class="toggle-track">
+          <input type="checkbox" class="toggle-checkbox" id="dark-mode-btn" />
+          <span class="toggle-thumb"></span>
+          <img src="images/sun.png" alt="" />
+          <img src="images/moon.png" alt="" />
+        </div>
+      </label>
+    </div>
+    <div class="container">
+      <div class="card input-wrapper">
+        <div class="from">
+          <span class="heading">From :</span>
+          <div class="dropdown-container" id="input-language">
+            <div class="dropdown-toggle">
+              <ion-icon name="globe-outline"></ion-icon>
+              <span class="selected" data-value="en">English</span>
+              <i class="ri-arrow-down-s-fill arrow-down"></i>
+            </div>
+            <ul class="dropdown-menu">
+              <li class="option active">DropDown Menu Item 1</li>
+              <li class="option">DropDown Menu Item 2</li>
+            </ul>
+          </div>
+        </div>
+        <div class="text-area">
+          <textarea id="input-text" cols="30" rows="10" placeholder="Enter your text here"></textarea>
+          <div class="icons">
+            <span class="copyleft">
+              <i class="bx bx-copy"></i>
+            </span>
+            <span id="click_to_record">
+              <i class="bx bx-microphone"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="center">
+        <div class="swap-position">
+          <i class="ri-arrow-left-right-fill"></i>
+        </div>
+      </div>
+
+      <div class="card output-wrapper">
+        <div class="to">
+          <span class="heading">To :</span>
+          <div class="dropdown-container" id="output-language">
+            <div class="dropdown-toggle">
+              <ion-icon name="globe-outline"></ion-icon>
+              <span class="selected" data-value="hi">Hindi</span>
+              <i class="ri-arrow-down-s-fill arrow-down"></i>
+            </div>
+            <ul class="dropdown-menu">
+              <li class="option active">DropDown Menu Item 1</li>
+              <li class="option">DropDown Menu Item 2</li>
+            </ul>
+          </div>
+        </div>
+        <textarea id="output-text" cols="30" rows="10" placeholder="Translated text will appear here"
+          disabled></textarea>
+        <div class="icons-left">
+          <span class=" copyright">
+            <i class="bx bx-copy"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="languages.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
